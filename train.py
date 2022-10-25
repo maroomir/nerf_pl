@@ -174,6 +174,6 @@ if __name__ == '__main__':
                       strategy='ddp' if hparams.num_gpus>1 else None,
                       num_sanity_val_steps=1,
                       benchmark=True,
-                      profiler=hparams.num_gpus==1)
+                      profiler=None)
 
     trainer.fit(system)
